@@ -47,7 +47,7 @@ data$no2 <- rank(data$no2,ties.method= "min")
 data$pm10 <- rank(data$pm10,ties.method= "min")
 data$so2 <- rank(data$so2,ties.method= "min")
 
-# Exponential transformation
+# Rankit rank-based normalisation / Normal transformation
 data$gpp_dist <- exp_default(data$gpp_dist, data)
 data$gpp_dist <- qnorm(data$gpp_dist, mean = 0, sd = 1)
 data$ed_dist <- exp_default(data$ed_dist, data)
